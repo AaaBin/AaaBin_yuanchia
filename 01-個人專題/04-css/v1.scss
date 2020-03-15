@@ -1,0 +1,523 @@
+@import 'variables';
+@import 'function';
+
+
+.container {
+    // container寬度:1680px、1200px、900px、540px、100%
+    // break point:1700px、1280px、960px、540px
+
+    max-width: 1680px;
+
+    @media screen and (max-width:1700px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (max-width:1280px) {
+        max-width: 960px;
+    }
+
+    @media screen and (max-width:960px) {
+        max-width: 600px;
+    }
+
+    @media screen and (max-width:600px) {
+        max-width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: $color2;
+    font-family: 微軟正黑體;
+}
+
+li {
+    list-style: none;
+}
+
+.section_title {
+    font-size: $fontSizePc3;
+}
+.landing_page,.about_us,.news,.product,.menu,.store,.join_us{
+    max-width: 2000px;
+}
+button{
+    margin: 0;
+    padding: 2px 4px;
+    border: 0;
+
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // 登陸頁
+    .landing_page {
+        .container {
+            .landing_page_top {
+
+                .landing_page_logo {
+                    img {
+                        width: 200px;
+                    }
+                }
+
+                .landing_page_banner {}
+
+                .parralax_banner {
+                    background-color: $color5;
+                }
+            }
+
+            .landing_page_bottom {
+                height: 210px;
+                background-image: url(../01-img/01-pc/01-png/pc-home_text-logo.png);
+                background-repeat: no-repeat;
+                background-size: 1010px;
+                background-position: center -25px;
+
+                h1 {
+                    font-size: $fontSizePc2;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-size: $fontSizePc4;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        z-index: 1;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        .container {
+            max-width: 100%; //navbar顯示的時候有寬度，所以可以抓到父層寬度
+            height: 75px;
+            padding: 0 120px;
+            background-color: $color5;
+            align-items: center;
+
+            .nav_left_area {
+                padding: 0 0 0 25px;
+                margin: 0 auto 0 0;
+
+                .nav_logo_area {
+                    align-items: center;
+                    width: 70px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .nav_btn_area {
+                width: 1300px;
+                height: 50px;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $color1;
+
+                li {
+                    // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
+                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
+                }
+            }
+
+            .nav_right_area {
+                display: none;
+            }
+        }
+    }
+
+    .about_us {
+        min-height: 990px;
+        width: 100%;
+        .about_us_bg_container {
+            padding: 0;
+            max-width: 100%;
+
+            .about_us_bg {
+                width: 1800px;
+            }
+        }
+
+        .container {
+            position: relative;
+            .about_us_top {
+                img {
+                    top: -400px;
+                    left: 0px;
+                }
+            }
+
+            .about_us_bottom {
+                width: 100%;
+                position: absolute;
+                bottom: -350px;
+                .about_us_bottom_left {
+                    width: 560px;
+                    border-right: 2px solid $color2;
+                    padding: 0 140px 0 0;
+                    margin: 0 100px 0 0;
+                    .about_us_content_area{
+                        .about_us_features{
+                            hr{
+                                margin: 0;
+                                border: 1px solid $color2;
+                            }
+                            h3{
+                                font-size: $fontSizePc5;
+                            }
+                            article{
+                                font-size: $fontSizePc5;
+                                line-height: 36px;
+                            }
+                        }
+                    }
+                }
+
+                .about_us_bottom_right {
+                    .about_us_img_area {
+                        width: 440px;
+                        clip-path: circle(49% at 50% 50%);
+                        background-color: $color5;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .leaf {
+                        width: 70px;
+                        bottom: 0px;
+                        left: 170px;
+                    }
+                    .plate {
+                        width: 150px;
+                        bottom: -15px;
+                        left: 145px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .news{
+        padding: 200px 0 0 0;
+        width: 100%;
+        margin: 0 0 230px 0;
+        .container{
+            .news_top{
+                img{
+                    left: 150px;
+                    top: -200px;
+                }
+            }
+        }
+        .news_bottom_container{
+            width: 1700px;
+            margin: 0 0 0 auto;
+            background-color: $color5;
+            border-radius: 100px 100px 100px 50px;
+            padding: 85px 140px 30px 120px;
+            .news_bottom{
+                .news_text_area{
+                    width: 220px;
+                    margin: 0 85px 0 0;
+                    padding: 65px 0 0 0;
+                    p{
+                        font-size: $fontSizePc5;
+                    }
+                }
+                .news_cards{
+                    flex: 1;
+                    .news_card{
+                        width: 345px;
+                        .news_card_time_area{
+                            padding: 10px 0;
+                            margin: 0 auto 0 0;
+                            .year{
+                                transform: rotate(90deg) translateX(0);
+                            }
+                            .month_n_date{
+
+                            }
+                        }
+                        .news_img_area{
+                            width: 100%;
+                            background-color: $color3;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        h4{
+                            font-size: $fontSizePc6 ;
+                            margin: 0 auto 10px 0;
+                        }
+                        p{
+                            font-size: $fontSizePc7;
+                            margin: 0 0 10px 0;
+                        }
+                        button{
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .product{
+        width: 100%;
+        margin: 0 0 150px 0;
+        .container{
+            .product_top{
+                padding: 0 0 0 280px;
+                margin: 0 60px 85px 0;
+                img{
+                    left: 20px;
+                    top: 30px;
+                }
+                .product_top_content{
+                    width: 600px;
+                    padding: 220px 0 0 0;
+                    margin: 0 60px 0 0;
+                    .product_title{
+
+                    }
+                    .product_intro{
+                        margin: 0 0 0 auto;
+                        .product_content_intro_title{
+                            font-size: $fontSizePc4;
+                        }
+                        .product_content_intro_text{
+                            font-size: $fontSizePc5;
+                        }
+                    }
+                    
+                }
+                .product_top_img{
+                    width: 475px;
+                    .product_intro_img{
+                        width: 100%;
+                    }
+                    .product_img_border{
+                        top: -100px;
+                        left: 50px;
+                    }
+                }
+            }
+            .product_bottom{
+                .product_thumbs_area{
+                    width: 100%;
+                    .product_thumbs{
+                        width: 910px;
+                        height: 230px;
+                        padding: 0 25px;
+                        .product_thumb{
+                            width: 150px;
+                            height: 210px;
+                            background-image: linear-gradient(16deg, rgba(116, 116, 116,0.02) 0%, rgba(116, 116, 116,0.02) 25%,transparent 25%, transparent 96%,rgba(177, 177, 177,0.02) 96%, rgba(177, 177, 177,0.02) 100%),linear-gradient(236deg, rgba(148, 148, 148,0.02) 0%, rgba(148, 148, 148,0.02) 53%,transparent 53%, transparent 59%,rgba(56, 56, 56,0.02) 59%, rgba(56, 56, 56,0.02) 100%),linear-gradient(284deg, rgba(16, 16, 16,0.02) 0%, rgba(16, 16, 16,0.02) 46%,transparent 46%, transparent 71%,rgba(181, 181, 181,0.02) 71%, rgba(181, 181, 181,0.02) 100%),linear-gradient(316deg, rgba(197, 197, 197,0.02) 0%, rgba(197, 197, 197,0.02) 26%,transparent 26%, transparent 49%,rgba(58, 58, 58,0.02) 49%, rgba(58, 58, 58,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+
+                            transition: 0.8s ease-in-out;
+                            position: relative;
+                            &:hover{
+                                height: 230px;
+                                background-image: linear-gradient(16deg, rgba(116, 116, 116,0.02) 0%, rgba(116, 116, 116,0.02) 25%,transparent 25%, transparent 96%,rgba(177, 177, 177,0.02) 96%, rgba(177, 177, 177,0.02) 100%),linear-gradient(236deg, rgba(148, 148, 148,0.02) 0%, rgba(148, 148, 148,0.02) 53%,transparent 53%, transparent 59%,rgba(56, 56, 56,0.02) 59%, rgba(56, 56, 56,0.02) 100%),linear-gradient(284deg, rgba(16, 16, 16,0.02) 0%, rgba(16, 16, 16,0.02) 46%,transparent 46%, transparent 71%,rgba(181, 181, 181,0.02) 71%, rgba(181, 181, 181,0.02) 100%),linear-gradient(316deg, rgba(197, 197, 197,0.02) 0%, rgba(197, 197, 197,0.02) 26%,transparent 26%, transparent 49%,rgba(58, 58, 58,0.02) 49%, rgba(58, 58, 58,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+                                .mask{
+                                    opacity: 0;
+                                }
+                            }
+
+                            .mask{
+                                background-color: $color5;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 1;
+                                transition: 0.8s ease-in-out;
+                                position: absolute;
+                                z-index: 0;
+                            }
+                            img{
+                                width: 100%;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .interlude{
+        width: 100%;
+        height: 300px;
+        background-color: $color1;
+        margin: 0 0 335px 0;;
+    }
+    .menu{
+        width: 100%;
+        margin: 0 0 550px 0;
+        .menu_background{
+            left: 510px;
+            z-index: -1;
+        }
+        .container{
+            .menu_title_area{
+                width: 820px;
+                padding: 0 0 0 150px;
+                img{
+                    width: 530px;
+                }
+                h2{
+                    padding: 0 0 0 80px;
+                }
+                .menu_legend{
+                    width: 420px;
+                    margin: 0 0 0 auto;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $color6;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20px;
+                    }
+
+                    span{
+                        margin: 0 40px 0 0;
+                    }
+                    i{
+                        font-size: 15px;
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+
+            .menu_drinks{
+                .menu_drink_kind{
+                    width: 360px;
+                    margin: 0 30px 0 0 ;
+                    &:nth-child(1),&:nth-child(2){
+                        padding: 350px 0 0 0;
+                    }
+                    .kind_title{
+                        width: 100%;
+                        height: 50px;
+                        background-color: $color5;
+                        margin: 0 0 15px 0;
+                        h3{
+                            font-size: $fontSizePc4;
+                        }
+                    }
+                    .drink_box{
+                        width: 320px;
+                        padding: 3px 10px;
+                        font-size: $fontSizePc6;
+                        background-color: $color1;
+                        margin: 0 0 15px 0;
+                        .drink_name{
+                            margin: 0 auto 0 0;
+                        }
+                        .drink_price{
+                            margin: 0 15px 0 0;
+                        }
+                        .hot_icon_area{
+                            i{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .store{
+        width: 100%;
+        background-color: $color5;
+        margin: 0 0 150px 0;
+        .container{
+            .store_title_area{
+                top: -270px;
+                left: 100px;
+                h2{
+                    margin: 0 0 0 120px;
+                }
+            }
+            .store_map_area{
+                padding: 15px 100px;
+                iframe{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .join_us{
+        padding: 150px 0 240px 0;
+        width: 100%;
+        .container{
+            padding: 0 150px;
+            img{
+                top: -200px;
+                left: 50px;
+            }
+            .join_us_form_area{
+                border: 1px solid $color2;
+                padding: 3px 30px;
+                .join_us_form_left{
+                    padding: 50px 0 40px 0;
+                    .form_column{
+                        margin: 0 0 15px 0;
+                        .column_name{
+                            text-align: center;
+                            width: 100px;
+                            margin: 0 10px 0 0 ;
+                        }
+                        .column_space{
+                            width: 550px;
+                            height: 45px;
+                            border: 1px solid $color2;
+                        }
+                    }
+                    .form_btn{
+                        padding: 5px 10px;
+                        border: 1px solid $color2;
+                    }
+                }
+                .join_us_form_right{
+                    width: 300px;
+                    background-color: $color5;
+                }
+            }
+        }
+    }
+
+    .footer{
+        .container{
+            .footer_logo{
+                width: 80px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+
+}

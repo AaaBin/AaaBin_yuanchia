@@ -1,0 +1,451 @@
+@import "variables";
+@import "function";
+
+.flex {
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    // 刪除預設樣式
+    font-size: unset;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    // 刪除預設樣式
+    list-style: none;
+}
+
+button {
+    // 刪除預設樣式
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: unset;
+    text-align: unset;
+    align-items: unset;
+    outline: unset;
+}
+
+* {
+    font-size: $fontSizePc5;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+    color: $color2;
+}
+
+.container {
+
+    // container寬度:1680px、1200px、900px、100%
+    // break point:1700px、1280px、960px、540px
+
+    display: flex;
+    width: 1680px;
+
+    // height: 100vh;
+    @media screen and (max-width:1700px) {
+        width: 1200px;
+    }
+
+    @media screen and (max-width:1280px) {
+        width: 900px;
+    }
+
+    @media screen and (max-width:960px) {
+        width: 100%;
+    }
+}
+
+
+// 主內容開始
+
+.all {
+    .home {
+        // landing page
+        .container {
+            margin: 0 auto; //置中
+            flex-direction: column;
+            min-height: 100vh;   //占滿全螢幕
+            padding: 100px 0 0 0;
+
+            .home_top_area {//左邊logo和右邊banner
+                justify-content: space-between;
+                padding: 0 0 0 70px;
+                margin: 0 0 70px 0;
+
+                .home_logo_area {
+                    width: 290px;
+                    padding: 40px 0 0 0;
+
+                    .home_logo_img {
+                        width: 70%;
+                    }
+                }
+
+                .home_banner_area {
+                    width: 1200px;
+                    height: 560px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    background-color: $color5;
+
+                    .banner_parallax_drink {   //測試用圖片
+                        width: 900px;
+                        z-index: -1;
+                        left: 80px;
+                    }
+                }
+            }
+            // landing page 底部的title
+            .home_bottom_area {
+                flex-direction: column;
+                position: relative;
+
+                .home_eng_title {  //英文大標
+                    position: absolute;
+                    top: -50px;
+                    left: 350px;
+                    z-index: -1;
+                }
+
+                .home_title {
+                    font-size: $fontSizePc2;
+                    text-align: center;
+                }
+
+                .home_subtitle {
+                    font-size: $fontSizePc4;
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+
+    .navbar {
+        position: fixed;
+        z-index: 1;
+
+        .container {
+            width: 100%;   //navbar顯示的時候有寬度，所以可以抓到父層寬度
+            height: 75px;
+            padding: 0 120px;
+            background-color: $color5;
+            align-items: center;
+
+            .nav_left_area {
+                padding: 0 0 0 25px;
+                margin: 0 auto 0 0;
+
+                .nav_logo_area {
+                    align-items: center;
+                    width: 70px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .nav_btn_area {
+                width: 1300px;
+                height: 50px;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $color1;
+
+                li {
+                    // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
+                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
+                }
+            }
+
+            .nav_right_area {
+                display: none;
+            }
+        }
+    }
+
+    .about_us {
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 1800px;
+        padding: 125px 0 0 0;
+        min-height: 990px;
+
+        .container {
+            margin: 0 auto;
+            flex-direction: column;
+
+            .about_us_top_area {
+                padding: 0 0 0 70px;
+
+                img {
+                    height: 225px;
+                }
+            }
+
+            .about_us_bottom_area {
+                display: flex;
+
+                .text_area {
+                    width: 480px;
+                    margin: 0 140px 0 290px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 400px;
+                        background-color: $color2;
+                        position: absolute;
+                        top: 60px;
+                        right: -140px;
+                    }
+
+                    .about_us_title {
+                        font-size: $fontSizePc3;
+                        margin: 0 0 45px 0;
+                    }
+
+                    .about_us_content {
+                        padding: 0 0 0 50px;
+                        margin: 0 0 20px 0;
+
+                        .about_us_content_subtitle {
+                            min-width: 420px;
+                            border-bottom: 1px solid $color2;
+                            margin: 0 0 25px 0;
+                        }
+                    }
+                }
+
+                .img_area {
+                    margin: 45px 0 0 175px;
+                    width: 440px;
+                    position: relative;
+
+                    .about_us_pics {
+                        width: 100%;
+                        background-color: $color5;
+                        clip-path: circle(49% at 50% 50%);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .about_us_decoration1 {
+                        position: absolute;
+                        left: 143px;
+                        bottom: 8px;
+                        z-index: -1;
+                    }
+
+                    .about_us_decoration2 {
+                        position: absolute;
+                        left: 160px;
+                        bottom: 25px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .news {
+        margin: 0 0 230px 0; //往下間隔product230px
+
+        .container {
+            flex-wrap: wrap;
+            margin: 0 auto;
+
+            .news_img_title {
+                padding: 0 0 0 160px;
+                width: 100%;
+                transform: translateY(40px); //靠近content區塊
+
+                img {
+                    height: 225px;
+                }
+            }
+
+            .news_content_area {
+                width: 100%;
+                background-color: $color5;
+                border-radius: 50px 75px 115px 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 60px 140px 15px 120px;
+
+                .news_title_area {
+                    width: 220px;
+                    padding: 150px 0 0 0;
+
+                    .news_title {
+                        font-size: $fontSizePc3;
+                    }
+                }
+
+                .news_content {
+                    max-width: 345px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .date {
+                        display: flex;
+                        padding: 30px 0;
+                        transform: translateX(-25px);
+
+                        div:nth-child(1) {
+                            transform: rotate(90deg) translate(0%, -30%); //翻轉
+                        }
+                    }
+
+                    .news_content_img_area {
+                        width: 345px;
+                        height: 345px;
+                        background-color: $color3;
+                        border-radius: 5px;
+                    }
+
+                    h3 {
+                        font-size: $fontSizePc6;
+                    }
+
+                    p {
+                        font-size: $fontSizePc7;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .product {
+        margin: 0 0 115px 0;
+
+        .container {
+            margin: 0 auto;
+            flex-direction: column;
+
+            .product_top {
+                display: flex;
+                margin: 0 0 85px 0; //跟下方間隔85
+
+                .product_top_left {
+                    display: flex;
+                    flex-direction: column;
+                    margin: -20px 50px 0 0;
+                    padding: 0 0 0 40px;
+
+                    .product_title_img {
+                        width: 850px;
+                        margin: 0 0 -40px 0;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .product_title {
+                        font-size: $fontSizePc3;
+                        margin: 0 0 105px 0;
+                    }
+
+                    .product_intro {
+                        margin: 0 0 0 auto;
+
+                        .product_intro_title {
+                            font-size: $fontSizePc4;
+                        }
+                    }
+                }
+
+                .product_top_right {
+                    width: 400px;
+                    height: 560px;
+                    border: 5px solid $color3;
+                    border-radius: 0 30px 0 30px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .product_img {
+                        width: 100%;
+                    }
+
+                    .leaf {
+                        width: 140px;
+                        position: absolute;
+                        top: -95px;
+                        right: -100px;
+                    }
+                }
+            }
+
+            .product_bottom {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .btn_left {
+                    img {
+                        width: 20px;
+                        height: 80px;
+                    }
+                }
+
+                .center_thumbs {
+                    width: 910px;
+                    height: 210px;
+                    margin: 0 25px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .thumb {
+                        width: 150px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        background-color: $color5;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .btn_right {
+                    img {
+                        width: 20px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 過場區塊
+    .interlude {
+        background-color: $color5;
+        width: 100%;
+        height: 340px;
+        margin: 0 0 135px 0;
+        background-image: url(../01-img/01-pc/01-png/parallax_banner/banner_img_草莓奶酪.png);
+        background-attachment: fixed;
+    }
+
+}

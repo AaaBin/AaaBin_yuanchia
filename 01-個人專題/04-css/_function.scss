@@ -1,0 +1,60 @@
+// 關門按鈕
+// 結構內容:  div>p
+// 參數:顏色1、顏色2、按鈕寬度、按鈕高度
+@mixin close_door_btn($color1, $color2, $width, $height, $speed) {
+    
+    padding: 0 $width;  // 按鈕兩側的基本寬度
+    text-align: center; //文字水平致中
+    transform: skewX(-20deg); //傾斜區塊
+    position: relative; //給before、after做
+    color: $color1;
+    transition: $speed;
+    &:hover{
+        color: $color2;
+    }
+    &:focus{
+        color: $color2;
+    }
+    // hover、fucus時寬度增加，製造關門效果
+    &:hover::before {
+        width: 55%;
+    }
+
+    &:hover::after {
+        width: 55%;
+    }
+
+    &:focus::before {
+        width: 55%;
+    }
+
+    &:focus::after {
+        width: 55%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        display: block;
+        width: 3px;
+        height: $height;
+        background-color: $color1;
+        transition:$speed;
+        z-index: -1;
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        content: "";
+        display: block;
+        width: 3px;
+        height: $height;
+        background-color: $color1;
+        transition:$speed;
+        z-index: -1;
+    }
+}

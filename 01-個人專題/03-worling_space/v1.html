@@ -10,6 +10,10 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- 個人css -->
     <link rel="stylesheet" href="../04-css/v1.css">
 </head>
@@ -23,7 +27,8 @@
                         <img src="../01-img/01-pc/01-png/pc-home_logo.png" alt="圓稼主logo">
                     </div>
                     <div class="landing_page_banner col-8 mr-5">
-                        <div id="banner_parallax" class="parralax_banner overflow-hidden rounded-lg" data-hover-only='false' >
+                        <div id="banner_parallax" class="parralax_banner overflow-hidden rounded-lg"
+                            data-hover-only='false'>
                             <img src="../01-img/01-pc/01-png/parallax_banner/banner_parallax_Y.png" alt=""
                                 data-depth="1.4">
                             <img src="../01-img/01-pc/01-png/parallax_banner/banner_parallax_Y.png" alt=""
@@ -75,29 +80,48 @@
         </nav>
         <div class="about_us">
             <div class="container about_us_bg_container d-flex justify-content-end">
-                <img class="about_us_bg lax" src="../01-img/01-pc/01-png/pc-about_us_bg.png" alt="" data-lax-opacity='700 0 ,1000 1'>
+                <img class="about_us_bg lax" src="../01-img/01-pc/01-png/pc-about_us_bg.png" alt=""
+                    data-lax-opacity='700 0 ,1000 1'>
             </div>
             <div class="container">
                 <div class="about_us_top position-relative">
                     <img class="about_up_img_title position-absolute" src="../01-img/01-pc/01-png/pc-about_us_text.png"
-                        alt="">
+                        alt="" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">
                 </div>
                 <div class="about_us_bottom row justify-content-center">
                     <div class="about_us_bottom_left ">
                         <div class="about_us_content_area">
                             <h2 class="about_us_title section_title">關於圓稼</h2>
                             <div class="about_us_features">
-                                <h3>01 品牌故事</h3>
-                                <hr>
-                                <article>
-                                    圓稼，一個來自台中東海商圈，挑戰創新的故事。圓稼正式成立於2017年，圓稼期許能創造出台灣嚼感新風潮。
-                                </article>
-                                <h3>02 白玉珍珠</h3>
-                                <hr>
-                                <h3>03 小芋園</h3>
-                                <hr>
-                                <h3>04 日月潭紅茶凍</h3>
-                                <hr>
+                                <div class="about_us_feature d-flex flex-column">
+                                    <a href="#feature1" data-toggle="collapse">01 品牌故事</a>
+                                    <hr>
+                                    <article class="collapse" id="feature1">
+                                        圓稼，一個來自台中東海商圈，挑戰創新的故事。圓稼正式成立於2017年，圓稼期許能創造出台灣嚼感新風潮。
+                                    </article>
+                                </div>
+                                <div class="about_us_feature d-flex flex-column">
+                                    <a href="#feature2" data-toggle="collapse">02 白玉珍珠</a>
+                                    <hr>
+                                    <article class="collapse" id="feature2">
+                                        定時精心熬煮，皇家御用白玉珍珠，天然無添加
+                                    </article>
+                                </div>
+                                <div class="about_us_feature d-flex flex-column">
+                                    <a href="#feature3" data-toggle="collapse">03 小芋園</a>
+                                    <hr>
+                                    <article class="collapse" id="feature3">
+                                        一口咬下，口感Q彈、散發濃濃芋香，還吃得到芋頭顆粒，令人意猶未盡的感受，喜愛吃芋頭的你一定不能錯過！
+                                    </article>
+                                </div>
+                                <div class="about_us_feature d-flex flex-column">
+                                    <a href="#feature4" data-toggle="collapse">04 日月潭紅茶凍</a>
+                                    <hr>
+                                    <article class="collapse" id="feature4">
+                                        每日早上八點黃金時段手作，製作過程耗時又費心，也因此擁有獨家的濃郁茶香，以及既滑順又彈牙的好滋味。
+                                    </article>
+                                </div>
+
                             </div>
                         </div>
 
@@ -116,7 +140,8 @@
         <div class="news d-flex flex-column">
             <div class="container">
                 <div class="news_top position-relative">
-                    <img class="position-absolute" src="../01-img/01-pc/01-png/pc-news_text.png" alt="">
+                    <img class="position-absolute" src="../01-img/01-pc/01-png/pc-news_text.png" alt=""
+                        data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">
                 </div>
             </div>
             <div class="news_bottom_container container">
@@ -134,7 +159,7 @@
                             <div class="news_img_area rounded">
                                 <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
                             </div>
-                            <h4>飲料喝的對錢包胖一倍   #新店開幕</h4>
+                            <h4>飲料喝的對錢包胖一倍 #新店開幕</h4>
                             <p>過年，大智只想和你一起給他霹哩啪拉紅整年。</p>
                             <button type="button">read more...</button>
                         </div>
@@ -148,7 +173,7 @@
                             <div class="news_img_area rounded">
                                 <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
                             </div>
-                            <h4>飲料喝的對錢包胖一倍   #新店開幕</h4>
+                            <h4>飲料喝的對錢包胖一倍 #新店開幕</h4>
                             <p>過年，大智只想和你一起給他霹哩啪拉紅整年。</p>
                             <button type="button">read more...</button>
                         </div>
@@ -162,19 +187,20 @@
                             <div class="news_img_area rounded">
                                 <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
                             </div>
-                            <h4>飲料喝的對錢包胖一倍   #新店開幕</h4>
+                            <h4>飲料喝的對錢包胖一倍 #新店開幕</h4>
                             <p>過年，大智只想和你一起給他霹哩啪拉紅整年。</p>
                             <button type="button">read more...</button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
         <div class="product">
             <div class="container">
                 <div class="product_top position-relative d-flex">
-                    <img class="position-absolute" src="../01-img/01-pc/01-png/pc-product_text.png" alt="">
+                    <img class="position-absolute" src="../01-img/01-pc/01-png/pc-product_text.png" alt=""
+                        data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">
                     <div class="product_top_content d-flex flex-column ">
                         <h2 class="product_title section_title">圓稼全明星</h2>
                         <div class="product_intro">
@@ -189,20 +215,81 @@
                     </div>
                     <div class="product_top_img position-relative">
                         <img class="product_intro_img" src="../01-img/測試用圖片/草莓奶酪.png" alt="">
-                        <img class="product_img_border position-absolute" src="../01-img/01-pc/01-png/pc-product_border_img.png" alt="">
+                        <img class="product_img_border position-absolute"
+                            src="../01-img/01-pc/01-png/pc-product_border_img.png" alt="">
                     </div>
                 </div>
                 <div class="product_bottom">
                     <div class="product_thumbs_area d-flex justify-content-center align-items-center ">
-                        <img class="align-self-center" src="../01-img/01-pc/01-png/pc-product_arrow_left.png" alt="">
-                        <div class="product_thumbs d-flex justify-content-between">
-                            <div class="product_thumb rounded d-flex align-items-center ;" >
-                                <div class="mask"></div>
-                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/芝芝葡萄1.png" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/芝芝葡萄1.png" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/芝芝葡萄2.png" alt="">
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
-                        <img src="../01-img/01-pc/01-png/pc-product_arrow_right.png" alt="">
-                    </div>  
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+
+
+
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,7 +298,8 @@
             <img class="menu_background position-absolute" src="../01-img/01-pc/01-png/pc-menu_img.png" alt="">
             <div class="container">
                 <div class="menu_title_area d-flex flex-column position-absolute">
-                    <img src="../01-img/01-pc/01-png/pc-menu_text.png" alt="">
+                    <img src="../01-img/01-pc/01-png/pc-menu_text.png" alt="" data-aos="fade-right"
+                        data-aos-duration="1500" data-aos-offset="0">
                     <h2 class="menu_title section_title">全品項</h2>
                     <div class="menu_legend d-flex align-items-center justify-content-center">
                         <i class="fas fa-crown"></i>
@@ -544,17 +632,21 @@
         <div class="store">
             <div class="container position-relative">
                 <div class="store_title_area position-absolute">
-                    <img src="../01-img/01-pc/01-png/pc-store_text.png" alt="">
+                    <img src="../01-img/01-pc/01-png/pc-store_text.png" alt="" data-aos="fade-right"
+                        data-aos-duration="1500" data-aos-offset="0">
                     <h2 class="store_title section_title">全台分店</h2>
                 </div>
                 <div class="store_map_area">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.714569299978!2d120.59040791536795!3d24.18174107807726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e27503674ad%3A0xec11bbc585d990ab!2z5ZyT56i84oCn5Zq85oSf5aW26Iy25bCI6LOj!5e0!3m2!1szh-TW!2stw!4v1583686349373!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.714569299978!2d120.59040791536795!3d24.18174107807726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e27503674ad%3A0xec11bbc585d990ab!2z5ZyT56i84oCn5Zq85oSf5aW26Iy25bCI6LOj!5e0!3m2!1szh-TW!2stw!4v1583686349373!5m2!1szh-TW!2stw"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
         <div class="join_us">
             <div class="container position-relative">
-                <img class="position-absolute" src="../01-img/01-pc/01-png/pc-join_us_text.png" alt="">
+                <img class="position-absolute" src="../01-img/01-pc/01-png/pc-join_us_text.png" alt=""
+                    data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">
                 <h2 class="join_us_title section_title">加盟</h2>
                 <div class="join_us_form_area d-flex justify-content-around">
                     <div class="join_us_form_left d-flex flex-column align-items-center">
@@ -625,8 +717,37 @@
         crossorigin="anonymous"></script>
     <!-- parallax.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
 
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 5,
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+    </script>
     <script src="../05-js/v1.js"></script>
 
 
@@ -653,8 +774,8 @@
     <script>
         // 偵測scrolltop值
         let st = document.querySelector("html");
-        window.onscroll = function(){   //onscroll事件
-            console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
+        window.onscroll = function () {   //onscroll事件
+            // console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
         }
     </script>
 </body>

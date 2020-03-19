@@ -42,7 +42,22 @@ li {
   font-size: 50px;
 }
 
-.landing_page, .about_us, .news, .product, .menu, .store, .join_us {
+a {
+  color: #215732;
+}
+
+a:hover {
+  color: #215732;
+  text-decoration: none;
+}
+
+.landing_page,
+.about_us,
+.news,
+.product,
+.menu,
+.store,
+.join_us {
   max-width: 2000px;
 }
 
@@ -238,16 +253,16 @@ button {
   margin: 0 100px 0 0;
 }
 
-.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features hr {
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features .about_us_feature hr {
   margin: 0;
   border: 1px solid #215732;
 }
 
-.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features h3 {
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features .about_us_feature a {
   font-size: 24px;
 }
 
-.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features article {
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features .about_us_feature article {
   font-size: 24px;
   line-height: 36px;
 }
@@ -328,6 +343,7 @@ button {
 .all .news .news_bottom_container .news_bottom .news_cards .news_card .news_img_area {
   width: 100%;
   background-color: #16A27D;
+  overflow: hidden;
 }
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card .news_img_area img {
@@ -398,13 +414,16 @@ button {
   width: 100%;
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs {
-  width: 910px;
+.all .product .container .product_bottom .product_thumbs_area .swiper-container {
+  width: 60%;
+}
+
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs {
   height: 230px;
   padding: 0 25px;
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb {
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs .product_thumb {
   width: 150px;
   height: 210px;
   background-image: linear-gradient(16deg, rgba(116, 116, 116, 0.02) 0%, rgba(116, 116, 116, 0.02) 25%, transparent 25%, transparent 96%, rgba(177, 177, 177, 0.02) 96%, rgba(177, 177, 177, 0.02) 100%), linear-gradient(236deg, rgba(148, 148, 148, 0.02) 0%, rgba(148, 148, 148, 0.02) 53%, transparent 53%, transparent 59%, rgba(56, 56, 56, 0.02) 59%, rgba(56, 56, 56, 0.02) 100%), linear-gradient(284deg, rgba(16, 16, 16, 0.02) 0%, rgba(16, 16, 16, 0.02) 46%, transparent 46%, transparent 71%, rgba(181, 181, 181, 0.02) 71%, rgba(181, 181, 181, 0.02) 100%), linear-gradient(316deg, rgba(197, 197, 197, 0.02) 0%, rgba(197, 197, 197, 0.02) 26%, transparent 26%, transparent 49%, rgba(58, 58, 58, 0.02) 49%, rgba(58, 58, 58, 0.02) 100%), linear-gradient(90deg, white, white);
@@ -413,16 +432,16 @@ button {
   position: relative;
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb:hover {
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs .product_thumb:hover {
   height: 230px;
   background-image: linear-gradient(16deg, rgba(116, 116, 116, 0.02) 0%, rgba(116, 116, 116, 0.02) 25%, transparent 25%, transparent 96%, rgba(177, 177, 177, 0.02) 96%, rgba(177, 177, 177, 0.02) 100%), linear-gradient(236deg, rgba(148, 148, 148, 0.02) 0%, rgba(148, 148, 148, 0.02) 53%, transparent 53%, transparent 59%, rgba(56, 56, 56, 0.02) 59%, rgba(56, 56, 56, 0.02) 100%), linear-gradient(284deg, rgba(16, 16, 16, 0.02) 0%, rgba(16, 16, 16, 0.02) 46%, transparent 46%, transparent 71%, rgba(181, 181, 181, 0.02) 71%, rgba(181, 181, 181, 0.02) 100%), linear-gradient(316deg, rgba(197, 197, 197, 0.02) 0%, rgba(197, 197, 197, 0.02) 26%, transparent 26%, transparent 49%, rgba(58, 58, 58, 0.02) 49%, rgba(58, 58, 58, 0.02) 100%), linear-gradient(90deg, white, white);
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb:hover .mask {
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs .product_thumb:hover .mask {
   opacity: 0;
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb .mask {
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs .product_thumb .mask {
   background-color: #EFF3F0;
   width: 100%;
   height: 100%;
@@ -433,9 +452,13 @@ button {
   z-index: 0;
 }
 
-.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb img {
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-wrapper .swiper-slide .product_thumbs .product_thumb img {
   width: 100%;
   z-index: 1;
+}
+
+.all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-button-next, .all .product .container .product_bottom .product_thumbs_area .swiper-container .swiper-button-prev {
+  color: #215732;
 }
 
 .all .interlude {
@@ -519,6 +542,12 @@ button {
   font-size: 21px;
   background-color: #F3E4BF;
   margin: 0 0 15px 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .drink_box:hover {
+  background-color: #FEE2CC;
 }
 
 .all .menu .container .menu_drinks .menu_drink_kind .drink_box .drink_name {

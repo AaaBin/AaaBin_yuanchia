@@ -84,8 +84,58 @@ button {
           align-items: center;
 }
 
+@media screen and (max-width: 1700px) {
+  .all .landing_page {
+    margin: 0 0 50px 0;
+  }
+}
+
+.all .landing_page .container {
+  padding: 40px 0 0 0;
+}
+
+.all .landing_page .container .landing_page_top {
+  padding: 50px 30px 0 30px;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .landing_page .container .landing_page_top {
+    position: relative;
+    padding: 0;
+  }
+}
+
+.all .landing_page .container .landing_page_top .landing_page_logo {
+  padding: 30px 0 0 0;
+}
+
 .all .landing_page .container .landing_page_top .landing_page_logo img {
   width: 200px;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .landing_page .container .landing_page_top .landing_page_logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 0;
+    z-index: 1;
+  }
+  .all .landing_page .container .landing_page_top .landing_page_logo img {
+    width: 100px;
+  }
+}
+
+.all .landing_page .container .landing_page_top .landing_page_banner {
+  max-width: 75%;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .landing_page .container .landing_page_top .landing_page_banner {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .all .landing_page .container .landing_page_top .parralax_banner {
@@ -100,9 +150,21 @@ button {
   background-position: center -25px;
 }
 
+@media screen and (max-width: 1700px) {
+  .all .landing_page .container .landing_page_bottom {
+    padding: 165px 0 0 0;
+  }
+}
+
 .all .landing_page .container .landing_page_bottom h1 {
   font-size: 72px;
   margin: 0;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .landing_page .container .landing_page_bottom h1 {
+    margin: 0 0 15px 0;
+  }
 }
 
 .all .landing_page .container .landing_page_bottom h2 {
@@ -196,6 +258,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F3E4BF;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .navbar .container .nav_btn_area {
+    width: 1100px;
+  }
 }
 
 .all .navbar .container .nav_btn_area li {
@@ -353,6 +421,12 @@ button {
   top: -200px;
 }
 
+@media screen and (max-width: 1700px) {
+  .all .news .container .news_top img {
+    top: -150px;
+  }
+}
+
 .all .news .news_bottom_container {
   width: 1700px;
   margin: 0 0 0 auto;
@@ -361,14 +435,44 @@ button {
   padding: 85px 140px 30px 120px;
 }
 
+@media screen and (max-width: 1700px) {
+  .all .news .news_bottom_container {
+    margin: 0 auto;
+    padding: 30px 25px 0 25px;
+  }
+}
+
+.all .news .news_bottom_container .news_bottom {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .all .news .news_bottom_container .news_bottom .news_text_area {
   width: 220px;
   margin: 0 85px 0 0;
   padding: 65px 0 0 0;
 }
 
+@media screen and (max-width: 1700px) {
+  .all .news .news_bottom_container .news_bottom .news_text_area {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .all .news .news_bottom_container .news_bottom .news_text_area h2 {
+    padding: 0 0 0 50px;
+  }
+}
+
 .all .news .news_bottom_container .news_bottom .news_text_area p {
   font-size: 24px;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .news .news_bottom_container .news_bottom .news_text_area p {
+    display: none;
+  }
 }
 
 .all .news .news_bottom_container .news_bottom .news_cards {
@@ -379,6 +483,12 @@ button {
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card {
   width: 345px;
+}
+
+@media screen and (max-width: 1700px) {
+  .all .news .news_bottom_container .news_bottom .news_cards .news_card {
+    width: 280px;
+  }
 }
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card .news_card_time_area {
@@ -426,7 +536,7 @@ button {
   margin: 0 60px 85px 0;
 }
 
-.all .product .container .product_top img {
+.all .product .container .product_top .priduct_img_title {
   left: 20px;
   top: 30px;
 }
@@ -450,16 +560,18 @@ button {
 }
 
 .all .product .container .product_top .product_top_img {
-  width: 475px;
+  width: 375px;
+  border: 6px solid #16A27D;
+  border-radius: 30px 0;
 }
 
 .all .product .container .product_top .product_top_img .product_intro_img {
   width: 100%;
 }
 
-.all .product .container .product_top .product_top_img .product_img_border {
-  top: -100px;
-  left: 50px;
+.all .product .container .product_top .product_top_img .product_img_leaf {
+  top: -95px;
+  right: -120px;
 }
 
 .all .product .container .product_bottom .product_thumbs_area {

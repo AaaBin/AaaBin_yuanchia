@@ -74,16 +74,43 @@ button {
 
     // 登陸頁
     .landing_page {
+        @media screen and (max-width:1700px) {
+            margin: 0 0 50px 0;
+        }
         .container {
+            padding: 40px 0 0 0 ;
             .landing_page_top {
-
+                padding: 50px 30px 0 30px;
+                @media screen and (max-width:1700px) {
+                    position: relative;
+                    padding: 0;
+                }
                 .landing_page_logo {
+                    padding: 30px 0 0 0;
                     img {
                         width: 200px;
                     }
+
+                    @media screen and (max-width:1700px) {
+                        position: absolute;
+                        top: 25px;
+                        left: 25px;
+                        padding: 0;
+                        z-index: 1;
+                        img{
+                            width: 100px;
+                        }
+                    }
                 }
 
-                .landing_page_banner {}
+                .landing_page_banner {
+                    max-width: 75%;
+                    @media screen and (max-width:1700px) {
+                        max-width: 1200px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
 
                 .parralax_banner {
                     background-color: $color5;
@@ -96,10 +123,15 @@ button {
                 background-repeat: no-repeat;
                 background-size: 1010px;
                 background-position: center -25px;
-
+                @media screen and (max-width:1700px) {
+                    padding: 165px 0 0 0;
+                }
                 h1 {
                     font-size: $fontSizePc2;
                     margin: 0;
+                    @media screen and (max-width:1700px) {
+                        margin: 0 0 15px 0;
+                    }
                 }
 
                 h2 {
@@ -163,7 +195,9 @@ button {
                 justify-content: space-around;
                 align-items: center;
                 background-color: $color1;
-
+                @media screen and (max-width:1700px) {
+                    width: 1100px;
+                }
                 li {
                     // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
                     @include close_door_btn($color2, $color1, 30px, 30px, 0.5s);
@@ -271,6 +305,9 @@ button {
                 img {
                     left: 150px;
                     top: -200px;
+                    @media screen and (max-width:1700px) {
+                        top: -150px;
+                    }
                 }
             }
         }
@@ -281,23 +318,41 @@ button {
             background-color: $color5;
             border-radius: 100px 100px 100px 50px;
             padding: 85px 140px 30px 120px;
-
+            @media screen and (max-width:1700px) {
+                margin: 0 auto;
+                padding: 30px 25px 0 25px;
+            }
             .news_bottom {
+                flex-wrap: wrap;
                 .news_text_area {
                     width: 220px;
                     margin: 0 85px 0 0;
                     padding: 65px 0 0 0;
-
+                    @media screen and (max-width:1700px) {
+                        width: 100%;
+                    }
+                    h2{
+                        @media screen and (max-width:1700px) {
+                            padding: 0 0 0 50px;
+                        }
+                    }
                     p {
                         font-size: $fontSizePc5;
+                        @media screen and (max-width:1700px) {
+                            display: none;
+                        }
                     }
                 }
 
                 .news_cards {
                     flex: 1;
+                    
 
                     .news_card {
                         width: 345px;
+                        @media screen and (max-width:1700px) {
+                            width: 280px;
+                        }
 
                         .news_card_time_area {
                             padding: 10px 0;
@@ -349,7 +404,7 @@ button {
                 padding: 0 0 0 280px;
                 margin: 0 60px 85px 0;
 
-                img {
+                .priduct_img_title {
                     left: 20px;
                     top: 30px;
                 }
@@ -376,15 +431,16 @@ button {
                 }
 
                 .product_top_img {
-                    width: 475px;
+                    width: 375px;
+                    border: 6px solid $color3;
+                    border-radius: 30px 0;
 
                     .product_intro_img {
                         width: 100%;
                     }
-
-                    .product_img_border {
-                        top: -100px;
-                        left: 50px;
+                    .product_img_leaf {
+                        top: -95px;
+                        right: -120px;
                     }
                 }
             }

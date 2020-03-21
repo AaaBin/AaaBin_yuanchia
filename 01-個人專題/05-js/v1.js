@@ -11,7 +11,7 @@ let nav = document.querySelector(".navbar");
 
             } else {
                 nav_logo.setAttribute('style','width:0px;');
-                nav.setAttribute("style","display:block ; position:fixed;top: 0;width: 100%;animation-name: navbar_out;animation-duration:2s;animation-iteration-count:1;");
+                nav.setAttribute("style","display:block ; position:fixed;top: 0;width: 100%;animation-name: navbar_out;animation-duration:2s;animation-iteration-count:1;animation-fill-mode:forwards");
 
             }
         }
@@ -54,18 +54,4 @@ $('#feature4').on('shown.bs.collapse', function () {
 })
 
 
-
-
-// pruduct區塊的下方縮圖
-let thumbs_bgs = document.querySelectorAll('.product_thumb img');
-        // console.log(thumbs_bgs);
-        // console.log(thumbs_bgs[0]);
-        thumbs_bgs.forEach(thumbs_bg => {
-            thumbs_bg.onmouseover = function(){
-                    thumbs_bg.setAttribute('src','../01-img/測試用圖片/芝芝葡萄1.png')
-            }
-            thumbs_bg.onmouseout = function(){
-                    thumbs_bg.setAttribute('src','../01-img/測試用圖片/草莓奶酪.png')
-                }
-        });
 

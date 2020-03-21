@@ -69,16 +69,26 @@
                     </div>
                 </div>
                 <div class="nav_btn_area d-flex">
-                    <li tabindex="1">關於圓稼</li>
-                    <li tabindex="1">最新消息</li>
-                    <li tabindex="1">全明星</li>
-                    <li tabindex="1">全台分店</li>
-                    <li tabindex="1">加盟我們</li>
+                    <li tabindex="1">
+                        <a href="#about_us_section">關於圓稼</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#news_section">最新消息</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#product_section">全明星</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#store_section_Anchor">全台分店</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#join_us_section">加盟我們</a>
+                    </li>
                 </div>
                 <div class="nav_right_area"></div>
             </div>
         </nav>
-        <div class="about_us">
+        <div id="about_us_section" class="about_us">
             <div class="container about_us_bg_container d-flex justify-content-end">
                 <img class="about_us_bg lax" src="../01-img/01-pc/01-png/pc-about_us_bg.png" alt=""
                     data-lax-opacity='700 0 ,1000 1'>
@@ -137,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div class="news d-flex flex-column">
+        <div id="news_section" class="news d-flex flex-column">
             <div class="container">
                 <div class="news_top position-relative">
                     <img class="position-absolute" src="../01-img/01-pc/01-png/pc-news_text.png" alt=""
@@ -196,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="product">
+        <div id="product_section" class="product">
             <div class="container">
                 <div class="product_top position-relative d-flex">
                     <img class="position-absolute" src="../01-img/01-pc/01-png/pc-product_text.png" alt=""
@@ -277,7 +287,22 @@
                                         <img src="../01-img/測試用圖片/芝芝葡萄2.png" alt="">
                                     </div>
                                 </div>
-                                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/芝芝葡萄2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_thumbs d-flex justify-content-between">
+                                    <div class="product_thumb rounded d-flex align-items-center ;">
+                                        <div class="mask"></div>
+                                        <img src="../01-img/測試用圖片/芝芝葡萄2.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Add Arrows -->
@@ -629,9 +654,9 @@
                 </div>
             </div>
         </div>
-        <div class="store">
+        <div id="store_section" class="store">
             <div class="container position-relative">
-                <div class="store_title_area position-absolute">
+                <div id="store_section_Anchor" class="store_title_area position-absolute">
                     <img src="../01-img/01-pc/01-png/pc-store_text.png" alt="" data-aos="fade-right"
                         data-aos-duration="1500" data-aos-offset="0">
                     <h2 class="store_title section_title">全台分店</h2>
@@ -643,7 +668,7 @@
                 </div>
             </div>
         </div>
-        <div class="join_us">
+        <div id="join_us_section" class="join_us">
             <div class="container position-relative">
                 <img class="position-absolute" src="../01-img/01-pc/01-png/pc-join_us_text.png" alt=""
                     data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">
@@ -690,8 +715,11 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="footer_logo">
-                    <img src="../01-img/01-pc/01-png/pc-home_logo.png" alt="">
+                <div class="footer_img">
+                    <img src="../01-img/01-pc/01-png/pc-menu_img.png" alt="">
+                </div>
+                <div class="footer_text p-xl-3 ">
+                    YUANCHIA 2020
                 </div>
             </div>
         </footer>
@@ -727,28 +755,24 @@
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             // Optional parameters
-            // direction: 'vertical',
             loop: true,
-
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
             },
-
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             slidesPerView: 5,
-
             // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
         })
+        
     </script>
-    <script src="../05-js/v1.js"></script>
 
 
     <script>
@@ -771,13 +795,9 @@
             window.requestAnimationFrame(updateLax)
         }
     </script>
-    <script>
-        // 偵測scrolltop值
-        let st = document.querySelector("html");
-        window.onscroll = function () {   //onscroll事件
-            // console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
-        }
-    </script>
+    <!-- 個人js -->
+    <script src="../05-js/v1.js"></script>
+
 </body>
 
 </html>

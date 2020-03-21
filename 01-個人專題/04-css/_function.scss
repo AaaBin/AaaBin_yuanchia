@@ -8,11 +8,13 @@
     transform: skewX(-20deg); //傾斜區塊
     position: relative; //給before、after做
     color: $color1;
-    transition: $speed;
-    &:hover{
+    a{
+        transition: $speed;
+    }
+    &:hover a{
         color: $color2;
     }
-    &:focus{
+    &:focus a{
         color: $color2;
     }
     // hover、fucus時寬度增加，製造關門效果

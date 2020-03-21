@@ -27,6 +27,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -108,9 +112,51 @@ button {
 .all .navbar {
   z-index: 1;
   padding: 0;
-  position: fixed;
+  display: none;
   top: 0;
   width: 100%;
+  -webkit-animation-name: navbar_in;
+          animation-name: navbar_in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes navbar_in {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes navbar_in {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes navbar_out {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -100px;
+  }
+}
+
+@keyframes navbar_out {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -100px;
+  }
 }
 
 .all .navbar .container {
@@ -132,7 +178,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70px;
+  width: 0px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .all .navbar .container .nav_left_area .nav_logo_area img {
@@ -157,15 +205,18 @@ button {
           transform: skewX(-20deg);
   position: relative;
   color: #215732;
+}
+
+.all .navbar .container .nav_btn_area li a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.all .navbar .container .nav_btn_area li:hover {
+.all .navbar .container .nav_btn_area li:hover a {
   color: #F3E4BF;
 }
 
-.all .navbar .container .nav_btn_area li:focus {
+.all .navbar .container .nav_btn_area li:focus a {
   color: #F3E4BF;
 }
 
@@ -362,6 +413,7 @@ button {
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card button {
   margin: 0 0 0 auto;
+  background-color: transparent;
 }
 
 .all .product {
@@ -542,8 +594,8 @@ button {
   font-size: 21px;
   background-color: #F3E4BF;
   margin: 0 0 15px 0;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .all .menu .container .menu_drinks .menu_drink_kind .drink_box:hover {
@@ -634,11 +686,48 @@ button {
   background-color: #EFF3F0;
 }
 
-.all .footer .container .footer_logo {
-  width: 80px;
+.all .footer .container .footer_text {
+  font-size: 18px;
 }
 
-.all .footer .container .footer_logo img {
+.all .footer .container .footer_img {
+  width: 70px;
+  margin: 0;
+  -webkit-animation-name: footer_img;
+          animation-name: footer_img;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes footer_img {
+  from {
+    -webkit-transform: rotateY(0deg) translateX(-600px);
+            transform: rotateY(0deg) translateX(-600px);
+  }
+  to {
+    -webkit-transform: rotateY(360deg) translateX(600px);
+            transform: rotateY(360deg) translateX(600px);
+  }
+}
+
+@keyframes footer_img {
+  from {
+    -webkit-transform: rotateY(0deg) translateX(-600px);
+            transform: rotateY(0deg) translateX(-600px);
+  }
+  to {
+    -webkit-transform: rotateY(360deg) translateX(600px);
+            transform: rotateY(360deg) translateX(600px);
+  }
+}
+
+.all .footer .container .footer_img img {
   width: 100%;
 }
 /*# sourceMappingURL=v1.css.map */

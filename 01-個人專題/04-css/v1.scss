@@ -24,7 +24,9 @@
         max-width: 100%;
     }
 }
-
+html{
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     color: $color2;
@@ -110,9 +112,28 @@ button {
     .navbar {
         z-index: 1;
         padding: 0;
-        position: fixed;
+        display: none;
         top: 0;
         width: 100%;
+        animation-name: navbar_in;
+        animation-duration:2s;
+        animation-iteration-count:1;
+        @keyframes navbar_in {
+            from{
+                top: -100px;;
+            }
+            to{
+                top: 0px;
+            }
+        }
+        @keyframes navbar_out {
+            from{
+                top: 0px;;
+            }
+            to{
+                top: -100px;
+            }
+        }
 
         .container {
             max-width: 100%; //navbar顯示的時候有寬度，所以可以抓到父層寬度
@@ -127,7 +148,8 @@ button {
 
                 .nav_logo_area {
                     align-items: center;
-                    width: 70px;
+                    width: 0px;
+                    transition:2s;
 
                     img {
                         width: 100%;
@@ -144,7 +166,7 @@ button {
 
                 li {
                     // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
-                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
+                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s);
                 }
             }
 
@@ -310,6 +332,7 @@ button {
 
                         button {
                             margin: 0 0 0 auto;
+                            background-color: transparent;
                         }
                     }
                 }
@@ -507,7 +530,7 @@ button {
                         font-size: $fontSizePc6;
                         background-color: $color1;
                         margin: 0 0 15px 0;
-                        transition: 0.4s ease-in-out;
+                        transition: 0.2s ease-in-out;
 
                         &:hover {
                             background-color: $color4;
@@ -609,10 +632,27 @@ button {
 
     .footer {
         .container {
-            .footer_logo {
-                width: 80px;
+            .footer_text{
+                font-size: $fontSizePc7;
+            }
+            .footer_img{
+                width: 70px;
+                margin: 0;
+                animation-name: footer_img;
+                animation-duration:4s;
+                animation-direction:alternate;
+                animation-iteration-count:infinite;
+                animation-timing-function:ease-in-out;
 
-                img {
+                @keyframes footer_img{
+                    from{
+                        transform: rotateY(0deg) translateX(-600px);
+                    }
+                    to{
+                        transform: rotateY(360deg) translateX(600px);
+                    }
+                }
+                img{
                     width: 100%;
                 }
             }
